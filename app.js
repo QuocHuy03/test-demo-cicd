@@ -37,9 +37,10 @@ app.get('/', (req, res) => {
   requestCount++;
   res.json({
     message: 'Hello from Node.js App on Kubernetes!',
-    version: '1.0.0',
+    version: '1.0.1', // Updated via CI/CD
     requests: requestCount,
-    environment: process.env.NODE_ENV || 'development'
+    environment: process.env.NODE_ENV || 'development',
+    deployedAt: new Date().toISOString()
   });
 });
 
