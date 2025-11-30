@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 app.get('/api/huydev', (req, res) => {
   requestCount++;
   res.json({
-    message: 'Hello World!',
+    message: 'huydev gà vãi nồi hehe@',
     timestamp: new Date().toISOString(),
     requests: requestCount
   });
@@ -58,3 +58,4 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
 
+// Auto-deployed by CI/CD
